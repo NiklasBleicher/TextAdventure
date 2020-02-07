@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Game>
+    <Rooms>
+        <Room name="Sitting Room">
+            <Description>This is the Room where all are coming together to have a laugh or Play some Games. In the middle of the Room is a Huge Pillow-Fortress which is guarded by Droggelbecher. The Fortress belongs to King Julien. Only those who are porved worthy are allowed to enter it</Description>
+            <NPCs>
+                <NPC>
+                    <loot>Earwax</loot>
+                    <name>Bienenman</name>
+                <Questions> 
+                    <Question number="1"> What Are You Doing here?</Question>
+                </Questions>
+                </NPC>
+                <NPC name="Droggelbecher"> 
+                
+                </NPC>
+            </NPCs>
+            <Items> 
+                <Item> </Item>
+                
+            </Items>
+            <Doors>
+                <SouthDoor> </SouthDoor>
+                <NorthDoor> </NorthDoor>
+                <WestDoor> </WestDoor>
+                <EastDoor> </EastDoor>
+            </Doors>
+        </Room>
+        <Room name="Toilets">
+            <Description>In the moment you are opening the Door a Blonde Girl Jumps out of the Cabin an Yells "SUUURPRIIISEEE".</Description>
+            <NPCs>
+               
+            </NPCs>
+            <Items>
+                <Item> 
+                
+                </Item>
+
+            </Items>
+            <Doors>
+                <SouthDoor> </SouthDoor>
+                <NorthDoor> </NorthDoor>
+                <WestDoor> </WestDoor>
+                <EastDoor> </EastDoor>
+            </Doors>
+        </Room>
+    </Rooms>
+    
+    
+</Game>

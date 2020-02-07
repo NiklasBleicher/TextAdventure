@@ -1,0 +1,5 @@
+C:\Users\Sascha\Desktop\Bleicher\TextAdventure\HarveysEscape\bin\Debug\HarveysEscape.exe
+C:\Users\Sascha\Desktop\Bleicher\TextAdventure\HarveysEscape\bin\Debug\HarveysEscape.pdb
+C:\Users\Sascha\Desktop\Bleicher\TextAdventure\HarveysEscape\obj\Debug\HarveysEscape.csprojAssemblyReference.cache
+C:\Users\Sascha\Desktop\Bleicher\TextAdventure\HarveysEscape\obj\Debug\HarveysEscape.exe
+C:\Users\Sascha\Desktop\Bleicher\TextAdventure\HarveysEscape\obj\Debug\HarveysEscape.pdb

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Player>
+    <stats>
+        <health>20</health>
+    </stats>
+    <Inventory>
+    </Inventory>
+    
+    <StartText>
+        You are Harvey. A small little Boy traped Inside a madhouse. The Goal of this Game is to Escape this Madness.
+    </StartText>
+    <EndText>
+        You made it out. This life is yours
+    </EndText>
+</Player>
