@@ -24,7 +24,7 @@ namespace HarveysEscape
         {
             Console.WriteLine(Player.StartText);
             Console.WriteLine(AllRooms[0].Npcs[0].Interactions);
-            while (this.GameStatus == true)
+            if (GameStatus)
             {
                
                 Console.WriteLine("What do you want to do?");
@@ -54,8 +54,13 @@ namespace HarveysEscape
                     case "n":
                         CurrentRoom.NorthDoor.TryPassDoor(this);
                         break;
+                    case "quit":
+                    case "q":
+                        GameStatus = false;
+                        break;
 
                 }
+                
             }
         }
 
