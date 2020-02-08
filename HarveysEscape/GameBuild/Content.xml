@@ -15,6 +15,7 @@
                     </Interactions>
                 </NPC>
                 <NPC>
+                    <Loot> </Loot>
                     <Name>Droggelbecher</Name>
                     <Interactions>
                         <Interaction type="talk">DROOOOGELLBECHER!!!!</Interaction>
@@ -24,9 +25,8 @@
                 </NPC>
             </NPCs>
             <Items> 
-                <Item>
-                    
-                </Item>
+                <Item>Deck of Cards</Item>
+                <Item>Newspaper from 2001</Item>
             </Items>
             <Doors>
                 <NorthDoor>
@@ -52,13 +52,18 @@
             <Value>Toilets</Value>
             <Description>In the moment you are opening the Door a Blonde Girl Jumps out of the Cabin an Yells "SUUURPRIIISEEE".</Description>
             <NPCs>
-               
+                <NPC>
+                    <Loot> </Loot>
+                    <Name>Tina</Name>
+                    <Interactions>
+                        <Interaction type="talk">A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Interaction>
+                        <Interaction type="wrongItem">Ääääääähmm... Nein?"</Interaction>
+                    </Interactions>
+                </NPC>
             </NPCs>
             <Items>
-                <Item> 
-                
-                </Item>
-
+                <Item>Coffee</Item>
+                <Item>Chips</Item>
             </Items>
             <Doors>
                 <SouthDoor> </SouthDoor>

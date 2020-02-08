@@ -43,7 +43,9 @@ namespace HarveysEscape
                 XmlNodeList xmlEastDoor = doc.GetElementsByTagName("EastDoor");
                 
                 //Get all NPC Data from XML
+                XmlNodeList xmlNPC = doc.GetElementsByTagName("NPC");
                 
+
                 for(int i = 0; i < xmlRooms.Count; i++)
                 {
                     //Get Data for Room
@@ -63,18 +65,10 @@ namespace HarveysEscape
                     
                     //Get Data for NPC in Room
                     List<NPC> npcs = new List<NPC>();
-                    
-                    foreach (XmlNode child in xmlRooms[i].ChildNodes)
-                    {
-                        if (child.Name == "NPC")
-                        {
-                            string npcName = child
-                            NPC npc = new NPC(npcName);
-                            npcs.Add(npc);
-                        }
-                    }
-                    
-                    //rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
+                    List<string> npcInteractions = new List<string>();
+
+
+                    rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
                 }
 
                 Console.WriteLine(rooms);
@@ -83,10 +77,20 @@ namespace HarveysEscape
                 Room currentRoom = rooms[0];
                 
                 //Filter Player Elements fromXML
-                Player player = new Player();
-                XmlDocument pla = new XmlDocument();
-                doc.Load(@"../../GameBuild/Player.xml");
+                XmlDocument doc2 = new XmlDocument();
+                doc2.Load(@"../../GameBuild/Player.xml");
+                XmlNodeList xmlPlayerName = doc2.GetElementsByTagName("Name");
+                XmlNodeList xmlPlayerHealth = doc2.GetElementsByTagName("Health");
+                XmlNodeList xmlStartText = doc2.GetElementsByTagName("StartText");
+                XmlNodeList xmlEndText = doc2.GetElementsByTagName("EndText");
+
+                string playerName = xmlPlayerName[0].InnerXml;
+                int playerHealth = int.Parse(xmlPlayerHealth[0].InnerXml);
+                List<Item> playerInventory = new List<Item>();
+                string startText = xmlStartText[0].InnerXml;
+                string endText = xmlEndText[0].InnerXml;
                 
+                Player player = new Player(playerName, playerHealth, playerInventory, startText, endText);
                 
                 TA = new TextAdventure(rooms, player, currentRoom);
                 //Call StartGame
