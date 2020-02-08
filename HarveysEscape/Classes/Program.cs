@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System.Xml;
 using System.IO;
+using System.Net.Sockets;
 
 namespace HarveysEscape
 {
@@ -46,10 +47,21 @@ namespace HarveysEscape
                     XmlNodeList xmlSouthDoor = doc.GetElementsByTagName("SouthDoor");
                     XmlNodeList xmlWestDoor = doc.GetElementsByTagName("WestDoor");
                     XmlNodeList xmlEastDoor = doc.GetElementsByTagName("EastDoor");
-
+                    
+                    //Get all Item Data from XML
+                    XmlNodeList xmlItem = doc.GetElementsByTagName("Item");
+                    XmlNodeList xmlItemName = doc.GetElementsByTagName("ItemName");
+                    XmlNodeList xmlItemDescription = doc.GetElementsByTagName("ItemDescription");
+                    XmlNodeList xmlItemIsWeapon = doc.GetElementsByTagName("IsWeapon");
+                    
                     //Get all NPC Data from XML
                     XmlNodeList xmlNPC = doc.GetElementsByTagName("NPC");
-
+                    XmlNodeList xmlNpcName = doc.GetElementsByTagName("Name");
+                    XmlNodeList xmlNpcInteractions = doc.GetElementsByTagName("Interaction");
+                    XmlNodeList xmlLootName = doc.GetElementsByTagName("LootName");
+                    XmlNodeList xmlLootDescription = doc.GetElementsByTagName("LootDescription");
+                    XmlNodeList xmlLootIsWeapon = doc.GetElementsByTagName("LootIsWeapon");
+                    
                     for (int i = 0; i < xmlRooms.Count; i++)
                     {
                         //Get Data for Room
@@ -69,11 +81,30 @@ namespace HarveysEscape
                         //Get Data for Items in Room
                         List<Item> items = new List<Item>();
 
-
+                        for (int k = 0; k < xmlItem.Count; k++)
+                        {
+                            string itemName = xmlItemName[k].InnerXml;
+                            string itemDescription = xmlItemDescription[k].InnerXml;
+                            bool itemIsWeapon;
+                            Boolean.TryParse(xmlDescription[k].InnerText, out itemIsWeapon);
+                            Item item = new Item(itemName, itemDescription, itemIsWeapon);
+                            items.Add(item);
+                        }
 
                         //Get Data for NPC in Room
                         List<NPC> npcs = new List<NPC>();
-                        List<string> npcInteractions = new List<string>();
+                        for(int count = 0; count < xmlNPC.Count; count++)
+                        {
+                            string npcName = xmlNpcName[count].InnerXml;
+                            Item npcItem = new Item(xmlLootName[count].InnerXml, xmlLootDescription[count].InnerXml, Convert.ToBoolean(xmlLootIsWeapon[count].InnerText));
+                            List<string> npcInteractions = new List<string>();
+                            
+                            foreach (XmlElement elem in xmlNpcInteractions)
+                            {
+                                npcInteractions.Add(elem.InnerXml);
+                            }
+                            npcs.Add(new NPC(npcName, npcItem, npcInteractions));
+                        }
 
                         rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
                         break;

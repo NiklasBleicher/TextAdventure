@@ -4,7 +4,11 @@
     <Description>This is the Room where all are coming together to have a laugh or Play some Games. In the middle of the Room is a Huge Pillow-Fortress which is guarded by Droggelbecher. The Fortress belongs to King Julien. Only those who are porved worthy are allowed to enter it</Description>
     <NPCs>
         <NPC>
-            <Loot>Earwax</Loot>
+            <Loot>
+                <LootName>Earwax</LootName>
+                <LootDescription>Its sticky and very Shinny!</LootDescription>
+                <LootIsWeapon>False</LootIsWeapon>
+            </Loot>
             <Name>Bienenman</Name>
             <Interactions>
                 <Interaction type="talk"> Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Interaction>
@@ -13,7 +17,11 @@
             </Interactions>
         </NPC>
         <NPC>
-            <Loot> </Loot>
+            <Loot>
+                <LootName>Broom</LootName>
+                <LootDescription>He is the Guard of The Fortress. This Broom is his only Weapon</LootDescription>
+                <LootIsWeapon>True</LootIsWeapon>
+            </Loot>
             <Name>Droggelbecher</Name>
             <Interactions>
                 <Interaction type="talk">DROOOOGELLBECHER!!!!</Interaction>
