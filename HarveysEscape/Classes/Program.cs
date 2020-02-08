@@ -22,6 +22,7 @@ namespace HarveysEscape
             Console.WriteLine("Type the number of the Option you need:");
             Console.WriteLine("1. Start Game");
             Console.WriteLine("2. Quit Game");
+            Console.Write(">");
             String input = Console.ReadLine();
             
             
@@ -32,7 +33,7 @@ namespace HarveysEscape
                 XmlDocument doc = new XmlDocument();
                 
                 List<Room> rooms = new List<Room>(); //Create Empty List of Rooms
-                for (int j = 0; j <= xmlPath.GetFiles().Length - 3; j++)
+                for (int j = 0; j <= xmlPath.GetFiles().Length - 7; j++)
                 {
                     
                     doc.Load(@"../../GameBuild/Room" + (j + 1) +".xml");

@@ -4,17 +4,27 @@
     <Description>In the moment you are opening the Door a Blonde Girl Jumps out of the Cabin an Yells "SUUURPRIIISEEE".</Description>
     <NPCs>
         <NPC>
-            <Loot> </Loot>
+            <Loot>
+                <LootName>Invitation</LootName>
+                <LootDescription>A personal Invitation for Michael xoxo</LootDescription>
+                <LootIsWeapon>True</LootIsWeapon>
+            </Loot>
             <Name>Tina</Name>
             <Interactions>
                 <Interaction type="talk">A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Interaction>
-                <Interaction type="wrongItem">Ääääääähmm... Nein?"</Interaction>
+                <Interaction type="wrongItem">Ääääääähmm... Nooo?"</Interaction>
             </Interactions>
         </NPC>
     </NPCs>
     <Items>
-        <Item>Coffee</Item>
-        <Item>Chips</Item>
+        <Item>
+            <ItemName>Coffee</ItemName>
+            <ItemDescription>I think the Guy who Produced this Game, consumed a lot of that</ItemDescription>
+            <IsWeapon>False</IsWeapon></Item>
+        <Item>
+            <ItemName>Chips</ItemName>
+            <ItemDescription>If you eat one. You eat all</ItemDescription>
+            <IsWeapon>False</IsWeapon></Item>
     </Items>
     <Doors>
         <SouthDoor>

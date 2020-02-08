@@ -1,37 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Room>
-    <Value>Bedroom</Value>
-    <Description>This is the Room where most of the Inhabitents are sleeping. Two Girls are Sitting on the Bed</Description>
+    <Value>Bar</Value>
+    <Description>The Room is filled in smooth green Light. One Person is Sitting at the Bar. The Bartender looks not amused at all</Description>
     <NPCs>
         <NPC>
-            <Loot>Baseball Bat</Loot>
-            <Name>Siblings</Name>
+            <Loot>
+                <LootName>Stink-Drink</LootName>
+                <LootDescription>It Stinks, but Drinking it? I dont know</LootDescription>
+                <LootIsWeapon>True</LootIsWeapon>
+            </Loot>
+            <Name>Bartender</Name>
             <Interactions>
-                <Interaction type="talk">What do you want? We don´t have any Time for you. We´re testing how we can transform </Interaction>
-                <Interaction type="wrongItem">This is not useful. Stop waisting our Time!</Interaction>
-                <Interaction type="rightItem"> You want to give us th Waxe? That is so nice of you. Here you go little Boy. Our Baseball Bat. Go do something with it</Interaction>
+                <Interaction type="talk">I only Serve Stink-Drink here. You can have one if you can find my old Ball. Take it or leave it</Interaction>
+                <Interaction type="wrongItem">You should get out of my Face </Interaction>
+                <Interaction type="rightItem">My Ball Nice. Now I can produce another Portion of Stink-Drink. One Stink-Drink here you Go </Interaction>
+            </Interactions>
+        </NPC>
+        <NPC>
+            <Loot>
+                <LootName> </LootName>
+                <LootDescription> </LootDescription>
+                <LootIsWeapon>False</LootIsWeapon>
+            </Loot>
+            <Name>Michael</Name>
+            <Interactions>
+                <Interaction type="talk">Can you believe that I got 40 today? </Interaction>
+                <Interaction type="wrongItem">This doesn´t make me younger right</Interaction>
+                <Interaction type="rightItem">That is so nice of her. I should go visit her</Interaction>
             </Interactions>
         </NPC>
     </NPCs>
     <Items>
-
+        <Item>
+            <ItemName> </ItemName>
+            <ItemDescription> </ItemDescription>
+            <IsWeapon>False</IsWeapon></Item>
     </Items>
     <Doors>
-        <NorthDoor>
-            <IsOpen>True</IsOpen>
-            <LeadsTo>Sleeping Area</LeadsTo>
-        </NorthDoor>
         <SouthDoor>
             <IsOpen>False</IsOpen>
-            <LeadsTo>Entrance Hall</LeadsTo>
+            <LeadsTo>There is no Door</LeadsTo>
         </SouthDoor>
+        <NorthDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>I dont think the Bartender would like it if I go there</LeadsTo>
+        </NorthDoor>
         <WestDoor>
             <IsOpen>True</IsOpen>
-            <LeadsTo>Toilets</LeadsTo>
+            <LeadsTo>Sitting Room</LeadsTo>
         </WestDoor>
         <EastDoor>
-            <IsOpen>True</IsOpen>
-            <LeadsTo>Bar</LeadsTo>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>Maybe I can just jump through that Wall</LeadsTo>
         </EastDoor>
     </Doors>
 </Room>

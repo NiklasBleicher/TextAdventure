@@ -1,37 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Room>
-    <Value>Bedroom</Value>
-    <Description>This is the Room where most of the Inhabitents are sleeping. Two Girls are Sitting on the Bed</Description>
+    <Value>Entrance Hall</Value>
+    <Description>This is it. You nearly made it Out. But Dr.Marcel is standing in you Way</Description>
     <NPCs>
         <NPC>
-            <Loot>Baseball Bat</Loot>
-            <Name>Siblings</Name>
+            <Loot>
+                <LootName> </LootName>
+                <LootDescription> </LootDescription>
+                <LootIsWeapon>False</LootIsWeapon>
+            </Loot>
+            <Name>Dr.Marcel</Name>
             <Interactions>
-                <Interaction type="talk">What do you want? We don´t have any Time for you. We´re testing how we can transform </Interaction>
-                <Interaction type="wrongItem">This is not useful. Stop waisting our Time!</Interaction>
-                <Interaction type="rightItem"> You want to give us th Waxe? That is so nice of you. Here you go little Boy. Our Baseball Bat. Go do something with it</Interaction>
+                <Interaction type="talk">Back to the Cell young Boy!!!</Interaction>
+                <Interaction type="wrongItem">You are not gonna beat me with that!</Interaction>
+                <Interaction type="rightItem">NOOO! Where you got that from. *DONG*</Interaction>
             </Interactions>
         </NPC>
     </NPCs>
     <Items>
-
+        <Item>
+            <ItemName>Camera</ItemName>
+            <ItemDescription>That looks broken </ItemDescription>
+            <IsWeapon>False</IsWeapon></Item>
     </Items>
     <Doors>
-        <NorthDoor>
-            <IsOpen>True</IsOpen>
-            <LeadsTo>Sleeping Area</LeadsTo>
-        </NorthDoor>
         <SouthDoor>
             <IsOpen>False</IsOpen>
-            <LeadsTo>Entrance Hall</LeadsTo>
+            <LeadsTo>FREEDOME</LeadsTo>
         </SouthDoor>
-        <WestDoor>
+        <NorthDoor>
             <IsOpen>True</IsOpen>
-            <LeadsTo>Toilets</LeadsTo>
+            <LeadsTo>Sitting Room</LeadsTo>
+        </NorthDoor>
+        <WestDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>This is not the Way I have to go</LeadsTo>
         </WestDoor>
         <EastDoor>
-            <IsOpen>True</IsOpen>
-            <LeadsTo>Bar</LeadsTo>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>There is no Door</LeadsTo>
         </EastDoor>
     </Doors>
 </Room>
