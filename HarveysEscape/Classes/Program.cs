@@ -33,18 +33,31 @@ namespace HarveysEscape
                 XmlDocument doc = new XmlDocument();
                 doc.Load(@"../../GameBuild/Content.xml");
                 
-                //Create Textadventure Object: List of Rooms, CurrentRoom, Player
-                List<Room> rooms = new List<Room>();
-                XmlNodeList XmlRooms = doc.GetElementsByTagName("Name");
-                XmlNodeList XmlDescription = doc.GetElementsByTagName("Description");
-                for(int i = 0; i < XmlRooms.Count; i++)
+                //Load All Room Data: NPCs, Items, ...
+                List<Room> rooms = new List<Room>() {}; //Create Empty List of Rooms
+                XmlNodeList xmlRooms = doc.GetElementsByTagName("Value"); 
+                XmlNodeList xmlDescription = doc.GetElementsByTagName("Description");
+                XmlNodeList xmlNorthDoor = doc.GetElementsByTagName("NorthDoor");
+                XmlNodeList xmlSouthDoor = doc.GetElementsByTagName("SouthDoor");
+                XmlNodeList xmlWestDoor = doc.GetElementsByTagName("WestDoor");
+                XmlNodeList xmlEastDoor = doc.GetElementsByTagName("EastDoor");
+                for(int i = 0; i < xmlRooms.Count; i++)
                 {
-                    Console.WriteLine(XmlRooms[i].InnerXml);
-                    rooms[i].Description = XmlDescription[i].InnerXml;
+                    //Get Data for Room
+                    string name = (xmlRooms[i].InnerXml);
+                    string description = xmlDescription[i].InnerXml;
+                    
+                    //Get Data for Doors in Room
+
+                    //Get Data for NPC in Room
+                    //rooms.Add(new Room(name, description, northdoor, ));
                 }
 
                 Console.WriteLine(rooms);
+                
+                //Set first Room to Start Room
                 Room currentRoom = rooms[0];
+                
                 //Filter Player Elements fromXML
                 Player player = new Player();
                 

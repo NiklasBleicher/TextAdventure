@@ -2,33 +2,53 @@
 <Game>
     <Rooms>
         <Room>
-            <Name>Sitting Room</Name>
+            <Value>Sitting Room</Value>
             <Description>This is the Room where all are coming together to have a laugh or Play some Games. In the middle of the Room is a Huge Pillow-Fortress which is guarded by Droggelbecher. The Fortress belongs to King Julien. Only those who are porved worthy are allowed to enter it</Description>
             <NPCs>
                 <NPC>
-                    <loot>Earwax</loot>
-                    <name>Bienenman</name>
-                <Questions> 
-                    <Question number="1"> What Are You Doing here?</Question>
-                </Questions>
+                    <Loot>Earwax</Loot>
+                    <Name>Bienenman</Name>
+                    <Interactions> 
+                        <Interaction type="talk"> Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Interaction>
+                        <Interaction type="wrongItem"> What is this? I dont need that. But some Coffe would be nice</Interaction>
+                        <Interaction type="rightItem"> Finally some Coffee. But I have some Problems with overproducing to much Earwax when I drink Hot Drinks. Take it I have no need for it</Interaction>
+                    </Interactions>
                 </NPC>
-                <NPC name="Droggelbecher"> 
-                
+                <NPC>
+                    <Name>Droggelbecher</Name>
+                    <Interactions>
+                        <Interaction type="talk">DROOOOGELLBECHER!!!!</Interaction>
+                        <Interaction type="wrongItem">DRODROODROOGGELBECHER!!!</Interaction>
+                        <Interaction type="rightItem">Farewell</Interaction>
+                    </Interactions>
                 </NPC>
             </NPCs>
             <Items> 
-                <Item> </Item>
+                <Item></Item>
                 
             </Items>
             <Doors>
-                <SouthDoor> </SouthDoor>
-                <NorthDoor> </NorthDoor>
-                <WestDoor> </WestDoor>
-                <EastDoor> </EastDoor>
+                <SouthDoor> 
+                    <IsOpen>False</IsOpen>
+                    <LeadsTo>Entrance Hall</LeadsTo>
+                </SouthDoor>
+                <NorthDoor> 
+                    <IsOpen>True</IsOpen>
+                    <LeadsTo>Sleeping Area</LeadsTo>
+                </NorthDoor>
+                <WestDoor> 
+                    <IsOpen>True</IsOpen>
+                    <LeadsTo>Toilets</LeadsTo>
+                </WestDoor>
+                <EastDoor> 
+                    <IsOpen>True</IsOpen>
+                    <LeadsTo>Bar</LeadsTo>
+                </EastDoor>
             </Doors>
         </Room>
+        
         <Room>
-            <Name>Toilets</Name>
+            <Value>Toilets</Value>
             <Description>In the moment you are opening the Door a Blonde Girl Jumps out of the Cabin an Yells "SUUURPRIIISEEE".</Description>
             <NPCs>
                
