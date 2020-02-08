@@ -2,11 +2,13 @@
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System.Xml;
+using System.IO;
 
 namespace HarveysEscape
 {
     class Program
     {
+        
         
         public static void Main(string[] args)
         {
@@ -20,17 +22,28 @@ namespace HarveysEscape
             Console.WriteLine("1. Start Game");
             Console.WriteLine("2. Quit Game");
             String input = Console.ReadLine();
+            
+            
+            
             if (input == "1")
             {
                 
+                
+                
                 XmlDocument doc = new XmlDocument();
                 doc.Load(@"../../GameBuild/Content.xml");
-                string content = doc.InnerXml;
                 
                 //Create Textadventure Object: List of Rooms, CurrentRoom, Player
                 List<Room> rooms = new List<Room>();
-                XmlNodeList elements = doc.GetElementsByTagName("Rooms");
-                Console.WriteLine(elements);
+                XmlNodeList XmlRooms = doc.GetElementsByTagName("Name");
+                XmlNodeList XmlDescription = doc.GetElementsByTagName("Description");
+                for(int i = 0; i < XmlRooms.Count; i++)
+                {
+                    Console.WriteLine(XmlRooms[i].InnerXml);
+                    rooms[i].Description = XmlDescription[i].InnerXml;
+                }
+
+                Console.WriteLine(rooms);
                 Room currentRoom = rooms[0];
                 //Filter Player Elements fromXML
                 Player player = new Player();

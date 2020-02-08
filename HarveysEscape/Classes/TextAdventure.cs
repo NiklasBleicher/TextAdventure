@@ -22,9 +22,20 @@ namespace HarveysEscape
 
         public void Play()
         {
+        
             while (gameStatus == true)
             {
-                Console.WriteLine();
+                Console.WriteLine("What do you want to do?");
+                string input = Console.ReadLine();
+                input = input.ToLower();
+
+                switch (input)
+                {
+                    case "commands":
+                    case    "c":
+                        Player.ShowInventory();
+                        break;
+                }
             }
         }
     }

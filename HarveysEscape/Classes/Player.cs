@@ -1,9 +1,13 @@
 ﻿namespace HarveysEscape
 {
     //Creates Player (Name, Introtext, Inventory)
-    //Methods: Move(), TalktoNPC(), PickUpItem(), DropItem(), 
+    //Methods: ShowInventory() PickUpItem(), DropItem(), 
     public class Player
     {
-        
+
+        public void ShowInventory()
+        {
+            
+        }
     }
 }
