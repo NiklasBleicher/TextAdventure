@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Room>
+    <Value>Sitting Room</Value>
+    <Description>This is the Room where all are coming together to have a laugh or Play some Games. In the middle of the Room is a Huge Pillow-Fortress which is guarded by Droggelbecher. The Fortress belongs to King Julien. Only those who are porved worthy are allowed to enter it</Description>
+    <NPCs>
+        <NPC>
+            <Loot>Earwax</Loot>
+            <Name>Bienenman</Name>
+            <Interactions>
+                <Interaction type="talk"> Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Interaction>
+                <Interaction type="wrongItem"> What is this? I dont need that. But some Coffe would be nice</Interaction>
+                <Interaction type="rightItem"> Finally some Coffee. But I have some Problems with overproducing to much Earwax when I drink Hot Drinks. Take it I have no need for it</Interaction>
+            </Interactions>
+        </NPC>
+        <NPC>
+            <Loot> </Loot>
+            <Name>Droggelbecher</Name>
+            <Interactions>
+                <Interaction type="talk">DROOOOGELLBECHER!!!!</Interaction>
+                <Interaction type="wrongItem">DRODROODROOGGELBECHER!!!</Interaction>
+                <Interaction type="rightItem">Farewell</Interaction>
+            </Interactions>
+        </NPC>
+    </NPCs>
+    <Items>
+        <Item>
+            <ItemName>Deck of Cards</ItemName>
+            <ItemDescription>They look really used. I can feel my Body itching just from looking at it</ItemDescription>
+            <IsWeapon>False</IsWeapon>
+        </Item>
+        <Item>
+            <ItemName>Newspaper from 2001</ItemName>
+            <ItemDescription>What?! What a Tragedy!</ItemDescription>
+            <IsWeapon>False</IsWeapon>
+        </Item>
+    </Items>
+    <Doors>
+        <NorthDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Sleeping Area</LeadsTo>
+        </NorthDoor>
+        <SouthDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>Entrance Hall</LeadsTo>
+        </SouthDoor>
+        <WestDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Toilets</LeadsTo>
+        </WestDoor>
+        <EastDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Bar</LeadsTo>
+        </EastDoor>
+    </Doors>
+</Room>
