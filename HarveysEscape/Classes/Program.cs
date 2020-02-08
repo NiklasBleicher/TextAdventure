@@ -85,8 +85,7 @@ namespace HarveysEscape
                         {
                             string itemName = xmlItemName[k].InnerXml;
                             string itemDescription = xmlItemDescription[k].InnerXml;
-                            bool itemIsWeapon;
-                            Boolean.TryParse(xmlDescription[k].InnerText, out itemIsWeapon);
+                            bool itemIsWeapon = Convert.ToBoolean(xmlItemIsWeapon[k].InnerText);
                             Item item = new Item(itemName, itemDescription, itemIsWeapon);
                             items.Add(item);
                         }
