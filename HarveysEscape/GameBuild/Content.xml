@@ -66,10 +66,22 @@
                 <Item>Chips</Item>
             </Items>
             <Doors>
-                <SouthDoor> </SouthDoor>
-                <NorthDoor> </NorthDoor>
-                <WestDoor> </WestDoor>
-                <EastDoor> </EastDoor>
+                <SouthDoor> 
+                    <IsOpen>False</IsOpen>
+                    <LeadsTo>Nowhere</LeadsTo>
+                </SouthDoor>
+                <NorthDoor>
+                    <IsOpen>False</IsOpen>
+                    <LeadsTo>Nowhere</LeadsTo>
+                </NorthDoor>
+                <WestDoor> 
+                    <IsOpen>False</IsOpen>
+                    <LeadsTo>Nowhere</LeadsTo>
+                </WestDoor>
+                <EastDoor>
+                    <IsOpen>True</IsOpen>
+                    <LeadsTo>Sitting Room</LeadsTo>
+                </EastDoor>
             </Doors>
         </Room>
     </Rooms>

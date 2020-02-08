@@ -45,13 +45,11 @@ namespace HarveysEscape
                 //Get all NPC Data from XML
                 XmlNodeList xmlNPC = doc.GetElementsByTagName("NPC");
                 
-
                 for(int i = 0; i < xmlRooms.Count; i++)
                 {
                     //Get Data for Room
                     string name = (xmlRooms[i].InnerXml);
                     string description = xmlDescription[i].InnerXml;
-
                     //Get Data for Doors in Room
                     Door northDoor = new Door(Convert.ToBoolean(xmlNorthDoor[i].FirstChild.InnerText), xmlNorthDoor[i].LastChild.InnerText);
                     Door southDoor = new Door(Convert.ToBoolean(xmlSouthDoor[i].FirstChild.InnerText), xmlSouthDoor[i].LastChild.InnerText);
@@ -66,13 +64,10 @@ namespace HarveysEscape
                     //Get Data for NPC in Room
                     List<NPC> npcs = new List<NPC>();
                     List<string> npcInteractions = new List<string>();
-
-
+                    
                     rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
                 }
 
-                Console.WriteLine(rooms);
-                
                 //Set first Room to Start Room
                 Room currentRoom = rooms[0];
                 
@@ -93,6 +88,7 @@ namespace HarveysEscape
                 Player player = new Player(playerName, playerHealth, playerInventory, startText, endText);
                 
                 TA = new TextAdventure(rooms, player, currentRoom);
+                
                 //Call StartGame
                 StartGame(TA);
             }

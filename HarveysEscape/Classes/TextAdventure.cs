@@ -25,7 +25,9 @@ namespace HarveysEscape
         
             while (gameStatus == true)
             {
+                Console.WriteLine(Player.StartText);
                 Console.WriteLine("What do you want to do?");
+                Console.Write(">");
                 string input = Console.ReadLine();
                 input = input.ToLower();
 
