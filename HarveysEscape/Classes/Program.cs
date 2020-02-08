@@ -31,10 +31,10 @@ namespace HarveysEscape
                 XmlDocument doc = new XmlDocument();
                 
                 List<Room> rooms = new List<Room>(); //Create Empty List of Rooms
-                for (int j = 0; j < xmlPath.GetFiles().Length; j++)
+                for (int j = 0; j <= xmlPath.GetFiles().Length - 3; j++)
                 {
                     
-                    doc.Load(@"../../GameBuild/Room" + j + 1 +".xml");
+                    doc.Load(@"../../GameBuild/Room" + (j + 1) +".xml");
 
                     //Get all Room Data from XML
                     XmlNodeList xmlRooms = doc.GetElementsByTagName("Value");
@@ -55,6 +55,7 @@ namespace HarveysEscape
                         //Get Data for Room
                         string name = (xmlRooms[i].InnerXml);
                         string description = xmlDescription[i].InnerXml;
+                        
                         //Get Data for Doors in Room
                         Door northDoor = new Door(Convert.ToBoolean(xmlNorthDoor[i].FirstChild.InnerText),
                             xmlNorthDoor[i].LastChild.InnerText);
@@ -75,6 +76,7 @@ namespace HarveysEscape
                         List<string> npcInteractions = new List<string>();
 
                         rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
+                        break;
                     }
                 }
 

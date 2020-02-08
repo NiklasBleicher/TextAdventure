@@ -50,6 +50,11 @@
   <ItemGroup>
     <Content Include="GameBuild\Content.xml" />
     <Content Include="GameBuild\Player.xml" />
+    <Content Include="GameBuild\Room1.xml" />
+    <Content Include="GameBuild\Room2.xml" />
+    <Content Include="GameBuild\Room3.xml" />
+    <Content Include="GameBuild\Room4.xml" />
+    <Content Include="GameBuild\Room5.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Room>
+    <Value>Toilets</Value>
+    <Description>In the moment you are opening the Door a Blonde Girl Jumps out of the Cabin an Yells "SUUURPRIIISEEE".</Description>
+    <NPCs>
+        <NPC>
+            <Loot> </Loot>
+            <Name>Tina</Name>
+            <Interactions>
+                <Interaction type="talk">A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Interaction>
+                <Interaction type="wrongItem">Ääääääähmm... Nein?"</Interaction>
+            </Interactions>
+        </NPC>
+    </NPCs>
+    <Items>
+        <Item>Coffee</Item>
+        <Item>Chips</Item>
+    </Items>
+    <Doors>
+        <SouthDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>Nowhere</LeadsTo>
+        </SouthDoor>
+        <NorthDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>Nowhere</LeadsTo>
+        </NorthDoor>
+        <WestDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>Nowhere</LeadsTo>
+        </WestDoor>
+        <EastDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Sitting Room</LeadsTo>
+        </EastDoor>
+    </Doors>
+</Room>

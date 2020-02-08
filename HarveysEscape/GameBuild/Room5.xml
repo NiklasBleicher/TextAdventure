@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Room>
+    <Value>Bedroom</Value>
+    <Description>This is the Room where most of the Inhabitents are sleeping. Two Girls are Sitting on the Bed</Description>
+    <NPCs>
+        <NPC>
+            <Loot>Baseball Bat</Loot>
+            <Name>Siblings</Name>
+            <Interactions>
+                <Interaction type="talk">What do you want? We don´t have any Time for you. We´re testing how we can transform </Interaction>
+                <Interaction type="wrongItem">This is not useful. Stop waisting our Time!</Interaction>
+                <Interaction type="rightItem"> You want to give us th Waxe? That is so nice of you. Here you go little Boy. Our Baseball Bat. Go do something with it</Interaction>
+            </Interactions>
+        </NPC>
+    </NPCs>
+    <Items>
+
+    </Items>
+    <Doors>
+        <NorthDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Sleeping Area</LeadsTo>
+        </NorthDoor>
+        <SouthDoor>
+            <IsOpen>False</IsOpen>
+            <LeadsTo>Entrance Hall</LeadsTo>
+        </SouthDoor>
+        <WestDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Toilets</LeadsTo>
+        </WestDoor>
+        <EastDoor>
+            <IsOpen>True</IsOpen>
+            <LeadsTo>Bar</LeadsTo>
+        </EastDoor>
+    </Doors>
+</Room>
