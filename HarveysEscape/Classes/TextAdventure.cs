@@ -23,6 +23,7 @@ namespace HarveysEscape
         public void Play()
         {
             Console.WriteLine(Player.StartText);
+            Console.WriteLine(AllRooms[0].Npcs[0].Interactions);
             while (this.GameStatus == true)
             {
                
@@ -35,8 +36,25 @@ namespace HarveysEscape
                 {
                     case "commands":
                     case    "c":
-                        this.DisplayCommands();
+                        DisplayCommands();
                         break;
+                    case "east":
+                    case    "e":
+                        CurrentRoom.EastDoor.TryPassDoor(this);
+                        break;
+                    case "west":
+                    case "w":
+                        CurrentRoom.WestDoor.TryPassDoor(this);
+                        break;
+                    case "south":
+                    case "s":
+                        CurrentRoom.SouthDoor.TryPassDoor(this);
+                        break;
+                    case "north":
+                    case "n":
+                        CurrentRoom.NorthDoor.TryPassDoor(this);
+                        break;
+
                 }
             }
         }

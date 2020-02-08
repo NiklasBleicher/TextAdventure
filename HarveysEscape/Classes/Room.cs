@@ -36,7 +36,7 @@ namespace HarveysEscape
 
         public void ShowRoom()
         {
-            
+            Console.WriteLine(this.Description);
         }
     }
     

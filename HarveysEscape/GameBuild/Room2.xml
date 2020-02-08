@@ -11,8 +11,9 @@
             </Loot>
             <Name>Tina</Name>
             <Interactions>
-                <Interaction type="talk">A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Interaction>
-                <Interaction type="wrongItem">Ääääääähmm... Nooo?"</Interaction>
+                <Talk>A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Talk>
+                <WrongItem>Ääääääähmm... Nooo?"</WrongItem>
+                <RightItem> </RightItem>
             </Interactions>
         </NPC>
     </NPCs>

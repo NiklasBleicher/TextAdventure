@@ -11,9 +11,9 @@
             </Loot>
             <Name>Dr.Marcel</Name>
             <Interactions>
-                <Interaction type="talk">Back to the Cell young Boy!!!</Interaction>
-                <Interaction type="wrongItem">You are not gonna beat me with that!</Interaction>
-                <Interaction type="rightItem">NOOO! Where you got that from. *DONG*</Interaction>
+                <Talk>Back to the Cell young Boy!!!</Talk>
+                <WrongItem>You are not gonna beat me with that!</WrongItem>
+                <RightItem>NOOO! Where you got that from. *DONG*</RightItem>
             </Interactions>
         </NPC>
     </NPCs>

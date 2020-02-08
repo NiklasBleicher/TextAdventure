@@ -11,9 +11,9 @@
             </Loot>
             <Name>The Siblings</Name>
             <Interactions>
-                <Interaction type="talk">What do you want? We don´t have any Time for you. We´re testing how we can transform Waxe into DNA</Interaction>
-                <Interaction type="wrongItem">This isn´t slightly useful</Interaction>
-                <Interaction type="rightItem">You want to give us th Waxe? That is so nice of you. Here you go little Boy. Our Baseball Bat. Go do something with it</Interaction>
+                <Talk>What do you want? We don´t have any Time for you. We´re testing how we can transform Waxe into DNA</Talk>
+                <WrongItem>This isn´t slightly useful</WrongItem>
+                <RightItem>You want to give us th Waxe? That is so nice of you. Here you go little Boy. Our Baseball Bat. Go do something with it</RightItem>
             </Interactions>
         </NPC>
     </NPCs>

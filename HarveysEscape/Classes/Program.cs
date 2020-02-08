@@ -33,7 +33,7 @@ namespace HarveysEscape
                 XmlDocument doc = new XmlDocument();
                 
                 List<Room> rooms = new List<Room>(); //Create Empty List of Rooms
-                for (int j = 0; j <= xmlPath.GetFiles().Length - 7; j++)
+                for (int j = 0; j <= xmlPath.GetFiles().Length - 3; j++)
                 {
                     
                     doc.Load(@"../../GameBuild/Room" + (j + 1) +".xml");
@@ -58,7 +58,9 @@ namespace HarveysEscape
                     //Get all NPC Data from XML
                     XmlNodeList xmlNPC = doc.GetElementsByTagName("NPC");
                     XmlNodeList xmlNpcName = doc.GetElementsByTagName("Name");
-                    XmlNodeList xmlNpcInteractions = doc.GetElementsByTagName("Interaction");
+                    XmlNodeList xmlNpcTalk = doc.GetElementsByTagName("Talk");
+                    XmlNodeList xmlNpcWrongItem = doc.GetElementsByTagName("WrongItem");
+                    XmlNodeList xmlNpcRightItem = doc.GetElementsByTagName("RightItem");
                     XmlNodeList xmlLootName = doc.GetElementsByTagName("LootName");
                     XmlNodeList xmlLootDescription = doc.GetElementsByTagName("LootDescription");
                     XmlNodeList xmlLootIsWeapon = doc.GetElementsByTagName("LootIsWeapon");
@@ -93,16 +95,20 @@ namespace HarveysEscape
 
                         //Get Data for NPC in Room
                         List<NPC> npcs = new List<NPC>();
+                        
                         for(int count = 0; count < xmlNPC.Count; count++)
                         {
                             string npcName = xmlNpcName[count].InnerXml;
                             Item npcItem = new Item(xmlLootName[count].InnerXml, xmlLootDescription[count].InnerXml, Convert.ToBoolean(xmlLootIsWeapon[count].InnerText));
-                            List<string> npcInteractions = new List<string>();
                             
-                            foreach (XmlElement elem in xmlNpcInteractions)
-                            {
-                                npcInteractions.Add(elem.InnerXml);
-                            }
+                            List<string> npcInteractions = new List<string>();
+                            string npcTalk = xmlNpcTalk[count].InnerXml;
+                            string npcWrongItem = xmlNpcWrongItem[count].InnerXml;
+                            string npcRightItem = xmlNpcRightItem[count].InnerXml;
+                            npcInteractions.Add(npcTalk);
+                            npcInteractions.Add(npcWrongItem);
+                            npcInteractions.Add(npcRightItem);
+                            
                             npcs.Add(new NPC(npcName, npcItem, npcInteractions));
                         }
 

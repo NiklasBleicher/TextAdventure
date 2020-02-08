@@ -11,9 +11,9 @@
             </Loot>
             <Name>Bienenman</Name>
             <Interactions>
-                <Interaction type="talk"> Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Interaction>
-                <Interaction type="wrongItem"> What is this? I dont need that. But some Coffe would be nice</Interaction>
-                <Interaction type="rightItem"> Finally some Coffee. But I have some Problems with overproducing to much Earwax when I drink Hot Drinks. Take it I have no need for it</Interaction>
+                <Talk> Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Talk>
+                <WrongItem> What is this? I dont need that. But some Coffe would be nice</WrongItem>
+                <RightItem> Finally some Coffee. But I have some Problems with overproducing to much Earwax when I drink Hot Drinks. Take it I have no need for it</RightItem>
             </Interactions>
         </NPC>
         <NPC>
@@ -24,9 +24,9 @@
             </Loot>
             <Name>Droggelbecher</Name>
             <Interactions>
-                <Interaction type="talk">DROOOOGELLBECHER!!!!</Interaction>
-                <Interaction type="wrongItem">DRODROODROOGGELBECHER!!!</Interaction>
-                <Interaction type="rightItem">Farewell</Interaction>
+                <Talk>DROOOOGELLBECHER!!!!</Talk>
+                <WrongItem>DRODROODROOGGELBECHER!!!</WrongItem>
+                <RightItem>Farewell</RightItem>
             </Interactions>
         </NPC>
     </NPCs>
@@ -48,7 +48,7 @@
             <LeadsTo>Sleeping Area</LeadsTo>
         </NorthDoor>
         <SouthDoor>
-            <IsOpen>False</IsOpen>
+            <IsOpen>True</IsOpen>
             <LeadsTo>Entrance Hall</LeadsTo>
         </SouthDoor>
         <WestDoor>

@@ -11,9 +11,9 @@
             </Loot>
             <Name>Bartender</Name>
             <Interactions>
-                <Interaction type="talk">I only Serve Stink-Drink here. You can have one if you can find my old Ball. Take it or leave it</Interaction>
-                <Interaction type="wrongItem">You should get out of my Face </Interaction>
-                <Interaction type="rightItem">My Ball Nice. Now I can produce another Portion of Stink-Drink. One Stink-Drink here you Go </Interaction>
+                <Talk>I only Serve Stink-Drink here. You can have one if you can find my old Ball. Take it or leave it</Talk>
+                <WrongItem>You should get out of my Face </WrongItem>
+                <RightItem>My Ball Nice. Now I can produce another Portion of Stink-Drink. One Stink-Drink here you Go </RightItem>
             </Interactions>
         </NPC>
         <NPC>
@@ -24,9 +24,9 @@
             </Loot>
             <Name>Michael</Name>
             <Interactions>
-                <Interaction type="talk">Can you believe that I got 40 today? </Interaction>
-                <Interaction type="wrongItem">This doesn´t make me younger right</Interaction>
-                <Interaction type="rightItem">That is so nice of her. I should go visit her</Interaction>
+                <Talk>Can you believe that I got 40 today? </Talk>
+                <WrongItem>This doesn´t make me younger right</WrongItem>
+                <RightItem>That is so nice of her. I should go visit her</RightItem>
             </Interactions>
         </NPC>
     </NPCs>
