@@ -24,18 +24,19 @@
                 </NPC>
             </NPCs>
             <Items> 
-                <Item></Item>
-                
+                <Item>
+                    
+                </Item>
             </Items>
             <Doors>
+                <NorthDoor>
+                    <IsOpen>True</IsOpen>
+                    <LeadsTo>Sleeping Area</LeadsTo>
+                </NorthDoor>
                 <SouthDoor> 
                     <IsOpen>False</IsOpen>
                     <LeadsTo>Entrance Hall</LeadsTo>
                 </SouthDoor>
-                <NorthDoor> 
-                    <IsOpen>True</IsOpen>
-                    <LeadsTo>Sleeping Area</LeadsTo>
-                </NorthDoor>
                 <WestDoor> 
                     <IsOpen>True</IsOpen>
                     <LeadsTo>Toilets</LeadsTo>
