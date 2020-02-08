@@ -27,45 +27,55 @@ namespace HarveysEscape
             
             if (input == "1")
             {
+                System.IO.DirectoryInfo xmlPath = new System.IO.DirectoryInfo(@"../../GameBuild/");
                 XmlDocument doc = new XmlDocument();
-                doc.Load(@"../../GameBuild/Content.xml");
-
-                //Get all Room Data from XML
+                
                 List<Room> rooms = new List<Room>(); //Create Empty List of Rooms
-                XmlNodeList xmlRooms = doc.GetElementsByTagName("Value"); 
-                XmlNodeList xmlDescription = doc.GetElementsByTagName("Description");
-                
-                //Get all Door Data from XML
-                XmlNodeList xmlDoors = doc.GetElementsByTagName("Doors");
-                XmlNodeList xmlNorthDoor = doc.GetElementsByTagName("NorthDoor");
-                XmlNodeList xmlSouthDoor = doc.GetElementsByTagName("SouthDoor");
-                XmlNodeList xmlWestDoor = doc.GetElementsByTagName("WestDoor");
-                XmlNodeList xmlEastDoor = doc.GetElementsByTagName("EastDoor");
-                
-                //Get all NPC Data from XML
-                XmlNodeList xmlNPC = doc.GetElementsByTagName("NPC");
-                
-                for(int i = 0; i < xmlRooms.Count; i++)
+                for (int j = 0; j < xmlPath.GetFiles().Length; j++)
                 {
-                    //Get Data for Room
-                    string name = (xmlRooms[i].InnerXml);
-                    string description = xmlDescription[i].InnerXml;
-                    //Get Data for Doors in Room
-                    Door northDoor = new Door(Convert.ToBoolean(xmlNorthDoor[i].FirstChild.InnerText), xmlNorthDoor[i].LastChild.InnerText);
-                    Door southDoor = new Door(Convert.ToBoolean(xmlSouthDoor[i].FirstChild.InnerText), xmlSouthDoor[i].LastChild.InnerText);
-                    Door westDoor = new Door(Convert.ToBoolean(xmlWestDoor[i].FirstChild.InnerText), xmlWestDoor[i].LastChild.InnerText);
-                    Door eastDoor = new Door(Convert.ToBoolean(xmlEastDoor[i].FirstChild.InnerText), xmlEastDoor[i].LastChild.InnerText);
                     
-                    //Get Data for Items in Room
-                    List<Item> items = new List<Item>();
+                    doc.Load(@"../../GameBuild/Room" + j + 1 +".xml");
+
+                    //Get all Room Data from XML
+                    XmlNodeList xmlRooms = doc.GetElementsByTagName("Value");
+                    XmlNodeList xmlDescription = doc.GetElementsByTagName("Description");
+
+                    //Get all Door Data from XML
+                    XmlNodeList xmlDoors = doc.GetElementsByTagName("Doors");
+                    XmlNodeList xmlNorthDoor = doc.GetElementsByTagName("NorthDoor");
+                    XmlNodeList xmlSouthDoor = doc.GetElementsByTagName("SouthDoor");
+                    XmlNodeList xmlWestDoor = doc.GetElementsByTagName("WestDoor");
+                    XmlNodeList xmlEastDoor = doc.GetElementsByTagName("EastDoor");
+
+                    //Get all NPC Data from XML
+                    XmlNodeList xmlNPC = doc.GetElementsByTagName("NPC");
+
+                    for (int i = 0; i < xmlRooms.Count; i++)
+                    {
+                        //Get Data for Room
+                        string name = (xmlRooms[i].InnerXml);
+                        string description = xmlDescription[i].InnerXml;
+                        //Get Data for Doors in Room
+                        Door northDoor = new Door(Convert.ToBoolean(xmlNorthDoor[i].FirstChild.InnerText),
+                            xmlNorthDoor[i].LastChild.InnerText);
+                        Door southDoor = new Door(Convert.ToBoolean(xmlSouthDoor[i].FirstChild.InnerText),
+                            xmlSouthDoor[i].LastChild.InnerText);
+                        Door westDoor = new Door(Convert.ToBoolean(xmlWestDoor[i].FirstChild.InnerText),
+                            xmlWestDoor[i].LastChild.InnerText);
+                        Door eastDoor = new Door(Convert.ToBoolean(xmlEastDoor[i].FirstChild.InnerText),
+                            xmlEastDoor[i].LastChild.InnerText);
+
+                        //Get Data for Items in Room
+                        List<Item> items = new List<Item>();
 
 
-                    
-                    //Get Data for NPC in Room
-                    List<NPC> npcs = new List<NPC>();
-                    List<string> npcInteractions = new List<string>();
-                    
-                    rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
+
+                        //Get Data for NPC in Room
+                        List<NPC> npcs = new List<NPC>();
+                        List<string> npcInteractions = new List<string>();
+
+                        rooms.Add(new Room(name, description, northDoor, southDoor, westDoor, eastDoor, items, npcs));
+                    }
                 }
 
                 //Set first Room to Start Room
