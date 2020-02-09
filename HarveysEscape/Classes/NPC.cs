@@ -17,10 +17,5 @@ namespace HarveysEscape
             this.Loot = _Loot;
             this.Interactions = _Interactions;
         }
-
-        public void Fight(TextAdventure _TA)
-        {
-            
-        }
     }
 }
