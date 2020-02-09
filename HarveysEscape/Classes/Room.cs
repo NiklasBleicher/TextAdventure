@@ -83,9 +83,41 @@ namespace HarveysEscape
             }
         }
 
-        public void FightNPC(TextAdventure _TA)
+        public void FightNPC(Player _P)
         {
-            
+            Console.WriteLine("Who do you want to attack?");
+            string input = Console.ReadLine();
+            if (Npcs.Count > 0)
+            {
+                foreach (NPC npc in Npcs)
+                {
+                    if (input == npc.Name)
+                    {
+                        if (input != "Dr.Marcel")
+                        {
+                            Console.WriteLine("Attacking " + npc.Name + " would cause even more trouble");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Which Weapon do you want to choose: ");
+                            foreach (Item item in _P.Inventory)
+                            {
+                                Console.Write(item + ", ");
+                            }
+                            string weapon = Console.ReadLine();
+                            Console.WriteLine(npc.Interactions[2]);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(npc.Name + " is not here");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No Danger in this Room");
+            }
         }
 
         public void RemoveNPC()
@@ -98,9 +130,43 @@ namespace HarveysEscape
             
         }
 
-        public void GiveItemToNPC(TextAdventure _TA)
+        public void GiveItemToNPC(Player _P)
         {
-            
+            Console.WriteLine("Who do you want to give an Item?");
+            string input = Console.ReadLine();
+            if (Npcs.Count > 0)
+            {
+                foreach (NPC npc in Npcs)
+                {
+                    if (input == npc.Name)
+                    {
+                        Console.WriteLine("Which Item do you want to give to " + input);
+                        string item = Console.ReadLine();
+                        if (item == npc.Interactions[2])
+                        {
+                            Console.WriteLine("Thank you so much for the " + item);
+                            int counter = 0;
+                            foreach (Item it in _P.Inventory)
+                            {
+                                if (item == it.Name)
+                                {
+                                    _P.Inventory.RemoveAt(counter);
+                                    Console.WriteLine(item + " was removed from Inventory");
+                                    Console.WriteLine("Here is Something in return: " + npc.Loot.Name);
+                                    _P.Inventory.Add(npc.Loot);
+                                    break;
+                                }
+                                
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine(npc.Interactions[1]);
+                        }
+                        
+                    }
+                }
+            }
         }
 
         public void GiveItemToPlayer(TextAdventure _TA)

@@ -61,6 +61,10 @@ namespace HarveysEscape
                     case "i":
                         Player.ShowInventory();
                         break;
+                    case "attack":
+                    case     "a":
+                        CurrentRoom.FightNPC(Player);
+                        break;
                     case "show item":
                     case     "si":
                         Player.ShowItem();
@@ -77,6 +81,10 @@ namespace HarveysEscape
                     case "ti":
                         Player.TakeItem(CurrentRoom);
                         break;
+                    case "give item":
+                    case     "gi":
+                        CurrentRoom.GiveItemToNPC(Player);
+                        break;
                     case "quit":
                     case "q":
                         GameStatus = false;
@@ -89,7 +97,7 @@ namespace HarveysEscape
 
         public void DisplayCommands()
         {
-            Console.WriteLine("commands(c), look(l), inventory(i), show item(si), talk(tk),take item(ti),drop item(di), give item(gi), north(n), south(s), west(w), east(e), quit(q)");
+            Console.WriteLine("commands(c), look(l), inventory(i), attack(a), show item(si), talk(tk),take item(ti),drop item(di), give item(gi), north(n), south(s), west(w), east(e), quit(q)");
         }
     }
 }

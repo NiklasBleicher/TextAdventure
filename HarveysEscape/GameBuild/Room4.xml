@@ -13,7 +13,7 @@
             <Interactions>
                 <Talk>What do you want? We don´t have any Time for you. We´re testing how we can transform Waxe into DNA</Talk>
                 <WrongItem>This isn´t slightly useful</WrongItem>
-                <RightItem>You want to give us th Waxe? That is so nice of you. Here you go little Boy. Our Baseball Bat. Go do something with it</RightItem>
+                <RightItem>Earwax</RightItem>
             </Interactions>
         </NPC>
     </NPCs>

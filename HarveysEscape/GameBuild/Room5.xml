@@ -18,15 +18,15 @@
         </NPC>
         <NPC>
             <Loot>
-                <LootName> </LootName>
-                <LootDescription> </LootDescription>
+                <LootName>Bottle</LootName>
+                <LootDescription>It is empty like Michaels Soul</LootDescription>
                 <LootIsWeapon>False</LootIsWeapon>
             </Loot>
             <Name>Michael</Name>
             <Interactions>
                 <Talk>Can you believe that I got 40 today? </Talk>
                 <WrongItem>This doesn´t make me younger right</WrongItem>
-                <RightItem>That is so nice of her. I should go visit her</RightItem>
+                <RightItem>Card</RightItem>
             </Interactions>
         </NPC>
     </NPCs>

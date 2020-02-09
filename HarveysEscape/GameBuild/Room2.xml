@@ -5,7 +5,7 @@
     <NPCs>
         <NPC>
             <Loot>
-                <LootName>Invitation</LootName>
+                <LootName>Card</LootName>
                 <LootDescription>A personal Invitation for Michael xoxo</LootDescription>
                 <LootIsWeapon>True</LootIsWeapon>
             </Loot>
@@ -13,7 +13,7 @@
             <Interactions>
                 <Talk>A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Talk>
                 <WrongItem>Ääääääähmm... Nooo?"</WrongItem>
-                <RightItem> </RightItem>
+                <RightItem>Newspaper from 2001</RightItem>
             </Interactions>
         </NPC>
     </NPCs>

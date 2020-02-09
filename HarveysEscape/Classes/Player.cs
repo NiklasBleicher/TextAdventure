@@ -32,6 +32,7 @@ namespace HarveysEscape
                 {
                     Console.Write(item.Name + ", ");
                 }
+                Console.Write("\n");
             }
             else
             {
