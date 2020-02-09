@@ -5,7 +5,7 @@ namespace HarveysEscape
 {
     //Constructor
     //Methods
-    public class NPC
+     class NPC
     {
         public string Name;
         public Item Loot;
@@ -16,6 +16,11 @@ namespace HarveysEscape
             this.Name = _Name;
             this.Loot = _Loot;
             this.Interactions = _Interactions;
+        }
+
+        public void Fight(TextAdventure _TA)
+        {
+            
         }
     }
 }

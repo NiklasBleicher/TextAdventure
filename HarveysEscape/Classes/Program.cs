@@ -159,6 +159,7 @@ namespace HarveysEscape
         private static void StartGame(TextAdventure _TA)
         {
             //Calls Play() from Text-Adventure-Class
+            Console.WriteLine(_TA.Player.StartText);
             _TA.Play();
         }
     }

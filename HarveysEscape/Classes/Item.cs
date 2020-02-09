@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HarveysEscape
 {
-    public class Item
+    class Item
     {
         public string Name;
         public string Description;

@@ -19,11 +19,10 @@ namespace HarveysEscape
             this.CurrentRoom = currentRoom;
             this.GameStatus = true;
         }
-
+        
         public void Play()
         {
-            Console.WriteLine(Player.StartText);
-            Console.WriteLine(AllRooms[0].Npcs[0].Interactions);
+            
             if (GameStatus)
             {
                
@@ -54,19 +53,43 @@ namespace HarveysEscape
                     case "n":
                         CurrentRoom.NorthDoor.TryPassDoor(this);
                         break;
+                    case "look":
+                    case "l":
+                        CurrentRoom.ShowRoom();
+                        break;
+                    case "inventory":
+                    case "i":
+                        Player.ShowInventory();
+                        break;
+                    case "show item":
+                    case     "si":
+                        Player.ShowItem();
+                        break;
+                    case "talk":
+                    case  "tk":
+                        CurrentRoom.TalkToNpc();
+                        break;
+                    case "drop item":
+                    case     "di":
+                        Player.DropItem(CurrentRoom);
+                        break;
+                    case "take item":
+                    case "ti":
+                        Player.TakeItem(CurrentRoom);
+                        break;
                     case "quit":
                     case "q":
                         GameStatus = false;
                         break;
 
                 }
-                
+                Play();
             }
         }
 
         public void DisplayCommands()
         {
-            Console.WriteLine("commands(c), look(l), ..");
+            Console.WriteLine("commands(c), look(l), inventory(i), show item(si), talk(tk),take item(ti),drop item(di), give item(gi), north(n), south(s), west(w), east(e), quit(q)");
         }
     }
 }

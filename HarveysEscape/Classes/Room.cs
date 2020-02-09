@@ -36,9 +36,79 @@ namespace HarveysEscape
 
         public void ShowRoom()
         {
-            Console.WriteLine(this.Description);
+            Console.WriteLine(Description + "\n");
+            
+            if (Items.Count > 0)
+            {
+                Console.WriteLine("These Items are in this Room: ");
+                foreach (Item item in Items)
+                {
+                    Console.Write(item.Name + ", ");
+                }
+                Console.Write("\n");
+            }
+            else
+            {
+                Console.WriteLine("There is nothing useful here");
+            }
+
+            if (this.Npcs.Count > 0)
+            {
+                Console.WriteLine("People in this Room: ");
+                foreach (NPC npc in Npcs)
+                {
+                    Console.Write(npc.Name + ", ");
+                }
+                Console.Write("\n");
+            }
+            else
+            {
+                Console.WriteLine("We are all alone in here");
+            }
+        }
+
+        public void TalkToNpc()
+        {
+            Console.WriteLine("Who do you want to talk to?");
+            string input = Console.ReadLine();
+            if (Npcs.Count > 0)
+            {
+                foreach (NPC npc in Npcs)
+                {
+                    if (input == npc.Name)
+                    {
+                        Console.WriteLine(npc.Interactions[0]);
+                    }
+                }
+            }
+        }
+
+        public void FightNPC(TextAdventure _TA)
+        {
+            
+        }
+
+        public void RemoveNPC()
+        {
+            
+        }
+
+        public void AddNPC()
+        {
+            
+        }
+
+        public void GiveItemToNPC(TextAdventure _TA)
+        {
+            
+        }
+
+        public void GiveItemToPlayer(TextAdventure _TA)
+        {
+            
         }
     }
+     
     
     
 }
