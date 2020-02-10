@@ -25,6 +25,7 @@ namespace HarveysEscape
                 if (LeadsTo == "FREEDOME")
                 {
                     Console.WriteLine("YOU WON THE GAME");
+                    Console.ReadLine();
                     _TA.GameStatus = false;
                 }
                 else
@@ -36,12 +37,14 @@ namespace HarveysEscape
                         {
                             foreach (Item item in _TA.Player.Inventory)
                             {
-                                if (item.Name == "Key")
+                                if (item.Name == "key")
                                 {
                                     _TA.CurrentRoom.SouthDoor.IsOpen = true;
                                     Console.WriteLine("You unlocked the Door!");
                                     PassDor(_TA);
+                                    break;
                                 }
+                                
                             }
                         }
                         else

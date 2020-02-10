@@ -45,6 +45,7 @@ namespace HarveysEscape
         {
             Console.WriteLine("Which Item do you want to drop?");
             string input = Console.ReadLine();
+            input = input.ToLower();
             if (Inventory.Count > 0)
             {
                 int counter = 0;
@@ -77,6 +78,7 @@ namespace HarveysEscape
         {
             Console.WriteLine("Which Item do you want to pick up?");
             string input = Console.ReadLine();
+            input = input.ToLower();
             if (_R.Items.Count > 0)
             {
                 int counter = 0; 
@@ -88,6 +90,10 @@ namespace HarveysEscape
                         Console.WriteLine(item.Name + " has been added to your Inventory");
                         _R.Items.RemoveAt(counter);
                         break;
+                    }
+                    else
+                    {
+                        counter = counter + 1;
                     }
                 }
             }

@@ -45,7 +45,7 @@
     </NPCs>
     <Items>
         <Item>
-            <ItemName>deck of Cards</ItemName>
+            <ItemName>deck of cards</ItemName>
             <ItemDescription>They look really used. I can feel my Body itching just from looking at it</ItemDescription>
             <IsWeapon>False</IsWeapon>
         </Item>

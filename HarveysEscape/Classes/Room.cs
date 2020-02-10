@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Mime;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 
 
 namespace HarveysEscape
@@ -95,7 +97,7 @@ namespace HarveysEscape
                 {
                     if (input == npc.Name)
                     {
-                        if (input != "Dr.Marcel")
+                        if (input != "dr.marcel")
                         {
                             Console.WriteLine("Attacking " + npc.Name + " would cause even more trouble");
                         }
@@ -117,15 +119,31 @@ namespace HarveysEscape
                                         Console.WriteLine(npc.Interactions[2]);
                                         Console.WriteLine("You defeated Dr.Marcel access to Freedome is now yours");
                                         _TA.CurrentRoom.SouthDoor.IsOpen = true;
+                                        RemoveNPC(npc);
+                                        break;
                                     }
                                     else
                                     {
-                                        Console.WriteLine(npc.Interactions[1]);
-                                        _TA.Player.Health = _TA.Player.Health - 5;
-                                        Console.WriteLine("You got hit by Dr. Marcel!");
+                                        if (_TA.Player.Health > 0)
+                                        {
+                                            Console.WriteLine(npc.Interactions[1]);
+                                            _TA.Player.Health = _TA.Player.Health - 5;
+                                            Console.WriteLine("You got hit by Dr. Marcel!");
+                                            Console.WriteLine("Your current Health is: " + _TA.Player.Health + ". Maybe you should Overthink your Strategy");   
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("You lost better Luck next time!");
+                                            Console.ReadLine();
+                                            _TA.GameStatus = false;
+                                        }
+                                      
                                     }
+
+                                  
                                 }
                             }
+                            break;
                             
                         }
                     }
@@ -141,14 +159,17 @@ namespace HarveysEscape
             }
         }
 
-        public void RemoveNPC()
+        public void RemoveNPC(NPC _npc)
         {
-            
-        }
-
-        public void AddNPC()
-        {
-            
+            int count = 0;
+            foreach (NPC npc in this.Npcs)
+            {
+                if (npc == _npc)
+                {
+                    Npcs.RemoveAt(count);
+                    break;
+                }
+            }
         }
 
         public void GiveItemToNPC(TextAdventure _TA)
@@ -179,6 +200,10 @@ namespace HarveysEscape
                                     _TA.Player.Inventory.Add(npc.Loot);
                                     break;
 
+                                }
+                                else
+                                {
+                                    counter = counter + 1;
                                 }
                             }
                         }
