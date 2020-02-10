@@ -27,7 +27,6 @@ namespace HarveysEscape
             {
                
                 Console.WriteLine("What do you want to do?");
-                DisplayCommands();
                 Console.Write(">");
                 string input = Console.ReadLine();
                 input = input.ToLower();

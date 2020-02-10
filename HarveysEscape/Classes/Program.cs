@@ -160,6 +160,8 @@ namespace HarveysEscape
         {
             //Calls Play() from Text-Adventure-Class
             Console.WriteLine(_TA.Player.StartText);
+            _TA.CurrentRoom.ShowRoom();
+            _TA.DisplayCommands();
             _TA.Play();
         }
     }
