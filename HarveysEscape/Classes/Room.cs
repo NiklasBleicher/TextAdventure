@@ -71,6 +71,7 @@ namespace HarveysEscape
         {
             Console.WriteLine("Who do you want to talk to?");
             string input = Console.ReadLine();
+            input = input.ToLower();
             if (Npcs.Count > 0)
             {
                 foreach (NPC npc in Npcs)
@@ -87,6 +88,7 @@ namespace HarveysEscape
         {
             Console.WriteLine("Who do you want to attack?");
             string input = Console.ReadLine();
+            input = input.ToLower();
             if (Npcs.Count > 0)
             {
                 foreach (NPC npc in Npcs)
@@ -105,6 +107,7 @@ namespace HarveysEscape
                                 Console.Write(item.Name + ", ");
                             }
                             string weapon = Console.ReadLine();
+                            weapon = weapon.ToLower();
                             foreach (Item item in _TA.Player.Inventory)
                             {
                                 if (weapon == item.Name)
@@ -112,6 +115,8 @@ namespace HarveysEscape
                                     if (item.IsWeapon)
                                     {
                                         Console.WriteLine(npc.Interactions[2]);
+                                        Console.WriteLine("You defeated Dr.Marcel access to Freedome is now yours");
+                                        _TA.CurrentRoom.SouthDoor.IsOpen = true;
                                     }
                                     else
                                     {
@@ -150,6 +155,7 @@ namespace HarveysEscape
         {
             Console.WriteLine("Who do you want to give an Item?");
             string input = Console.ReadLine();
+            input = input.ToLower();
             if (Npcs.Count > 0)
             {
                 foreach (NPC npc in Npcs)
@@ -158,6 +164,7 @@ namespace HarveysEscape
                     {
                         Console.WriteLine("Which Item do you want to give to " + input);
                         string item = Console.ReadLine();
+                        item = item.ToLower();
                         if (item == npc.Interactions[2])
                         {
                             Console.WriteLine("Thank you so much for the " + item);

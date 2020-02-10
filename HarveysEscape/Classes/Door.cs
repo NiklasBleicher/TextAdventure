@@ -42,10 +42,6 @@ namespace HarveysEscape
                                     Console.WriteLine("You unlocked the Door!");
                                     PassDor(_TA);
                                 }
-                                else
-                                {
-                                    Console.WriteLine("You need a Key to enter");
-                                }
                             }
                         }
                         else

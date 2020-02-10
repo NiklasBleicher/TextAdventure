@@ -5,28 +5,28 @@
     <NPCs>
         <NPC>
             <Loot>
-                <LootName>Stink-Drink</LootName>
+                <LootName>stink-drink</LootName>
                 <LootDescription>It Stinks, but Drinking it? I dont know</LootDescription>
                 <LootIsWeapon>True</LootIsWeapon>
             </Loot>
-            <Name>Bartender</Name>
+            <Name>bartender</Name>
             <Interactions>
                 <Talk>I only Serve Stink-Drink here. You can have one if you can find my old Ball. Take it or leave it</Talk>
                 <WrongItem>You should get out of my Face </WrongItem>
-                <RightItem>Ball</RightItem>
+                <RightItem>ball</RightItem>
             </Interactions>
         </NPC>
         <NPC>
             <Loot>
-                <LootName>Bottle</LootName>
+                <LootName>bottle</LootName>
                 <LootDescription>It is empty like Michaels Soul</LootDescription>
                 <LootIsWeapon>False</LootIsWeapon>
             </Loot>
-            <Name>Michael</Name>
+            <Name>michael</Name>
             <Interactions>
                 <Talk>Can you believe that I got 40 today? </Talk>
                 <WrongItem>This doesn´t make me younger right</WrongItem>
-                <RightItem>Card</RightItem>
+                <RightItem>card</RightItem>
             </Interactions>
         </NPC>
     </NPCs>

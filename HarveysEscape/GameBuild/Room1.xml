@@ -5,52 +5,52 @@
     <NPCs>
         <NPC>
             <Loot>
-                <LootName>Earwax</LootName>
+                <LootName>earwax</LootName>
                 <LootDescription>Its sticky and very Shinny!</LootDescription>
                 <LootIsWeapon>False</LootIsWeapon>
             </Loot>
-            <Name>Bienenman</Name>
+            <Name>bienenman</Name>
             <Interactions>
-                <Talk> Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Talk>
+                <Talk> Why Im inside here? Isn´t that obvious? I am a middle aged man wearing a Bee Costume</Talk>
                 <WrongItem> What is this? I dont need that. But some Coffe would be nice</WrongItem>
-                <RightItem>Coffee</RightItem>
+                <RightItem>coffee</RightItem>
             </Interactions>
         </NPC>
         <NPC>
             <Loot>
-                <LootName>Broom</LootName>
+                <LootName>broom</LootName>
                 <LootDescription>He is the Guard of The Fortress. This Broom is his only Weapon</LootDescription>
                 <LootIsWeapon>True</LootIsWeapon>
             </Loot>
-            <Name>Droggelbecher</Name>
+            <Name>droggelbecher</Name>
             <Interactions>
                 <Talk>DROOOOGELLBECHER!!!!</Talk>
                 <WrongItem>DRODROODROOGGELBECHER!!!</WrongItem>
-                <RightItem>Chips</RightItem>
+                <RightItem>chips</RightItem>
             </Interactions>
         </NPC>
         <NPC>
             <Loot>
-                <LootName>Key</LootName>
+                <LootName>key</LootName>
                 <LootDescription>This is the Key</LootDescription>
                 <LootIsWeapon>False</LootIsWeapon>
             </Loot>
-            <Name>Guard</Name>
+            <Name>guard</Name>
             <Interactions>
                 <Talk>You are not allowed to go out here... and me either and I could really use a Drink</Talk>
                 <WrongItem>Take that out of my Face right now</WrongItem>
-                <RightItem>Stink-Drink</RightItem>
+                <RightItem>stink-drink</RightItem>
             </Interactions>
         </NPC>
     </NPCs>
     <Items>
         <Item>
-            <ItemName>Deck of Cards</ItemName>
+            <ItemName>deck of Cards</ItemName>
             <ItemDescription>They look really used. I can feel my Body itching just from looking at it</ItemDescription>
             <IsWeapon>False</IsWeapon>
         </Item>
         <Item>
-            <ItemName>Newspaper from 2001</ItemName>
+            <ItemName>newspaper from 2001</ItemName>
             <ItemDescription>What?! What a Tragedy!</ItemDescription>
             <IsWeapon>False</IsWeapon>
         </Item>

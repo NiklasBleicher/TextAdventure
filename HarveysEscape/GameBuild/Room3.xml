@@ -9,7 +9,7 @@
                 <LootDescription> </LootDescription>
                 <LootIsWeapon>False</LootIsWeapon>
             </Loot>
-            <Name>Dr.Marcel</Name>
+            <Name>dr.marcel</Name>
             <Interactions>
                 <Talk>Back to the Cell young Boy!!!</Talk>
                 <WrongItem>You are not gonna beat me with that!</WrongItem>
@@ -19,7 +19,7 @@
     </NPCs>
     <Items>
         <Item>
-            <ItemName>Camera</ItemName>
+            <ItemName>camera</ItemName>
             <ItemDescription>That looks broken </ItemDescription>
             <IsWeapon>False</IsWeapon></Item>
     </Items>
@@ -34,7 +34,7 @@
         </NorthDoor>
         <WestDoor>
             <IsOpen>False</IsOpen>
-            <LeadsTo>This is not the Way I have to go</LeadsTo>
+            <LeadsTo>Nowhere</LeadsTo>
         </WestDoor>
         <EastDoor>
             <IsOpen>False</IsOpen>

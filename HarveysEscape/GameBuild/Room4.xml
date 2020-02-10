@@ -5,21 +5,21 @@
     <NPCs>
         <NPC>
             <Loot>
-                <LootName>Baseball Bat</LootName>
+                <LootName>baseball Bat</LootName>
                 <LootDescription>That looks Dangerous. I like it</LootDescription>
                 <LootIsWeapon>True</LootIsWeapon>
             </Loot>
-            <Name>The Siblings</Name>
+            <Name>the siblings</Name>
             <Interactions>
                 <Talk>What do you want? We don´t have any Time for you. We´re testing how we can transform Waxe into DNA</Talk>
                 <WrongItem>This isn´t slightly useful</WrongItem>
-                <RightItem>Earwax</RightItem>
+                <RightItem>earwax</RightItem>
             </Interactions>
         </NPC>
     </NPCs>
     <Items>
         <Item>
-            <ItemName>Ball</ItemName>
+            <ItemName>ball</ItemName>
             <ItemDescription>It looks damaged. Who would need something like that?</ItemDescription>
             <IsWeapon>False</IsWeapon></Item>
     </Items>

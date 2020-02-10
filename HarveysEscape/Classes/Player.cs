@@ -89,11 +89,6 @@ namespace HarveysEscape
                         _R.Items.RemoveAt(counter);
                         break;
                     }
-                    else
-                    {
-                        Console.WriteLine("Are you sure about this?");
-                        break;
-                    }
                 }
             }
             else

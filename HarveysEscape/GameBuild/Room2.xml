@@ -5,25 +5,25 @@
     <NPCs>
         <NPC>
             <Loot>
-                <LootName>Card</LootName>
+                <LootName>card</LootName>
                 <LootDescription>A personal Invitation for Michael xoxo</LootDescription>
                 <LootIsWeapon>True</LootIsWeapon>
             </Loot>
-            <Name>Tina</Name>
+            <Name>tina</Name>
             <Interactions>
                 <Talk>A Party on the Toilet. Surprising right? It would be more fun if Michael was here</Talk>
                 <WrongItem>Ääääääähmm... Nooo?"</WrongItem>
-                <RightItem>Newspaper from 2001</RightItem>
+                <RightItem>newspaper from 2001</RightItem>
             </Interactions>
         </NPC>
     </NPCs>
     <Items>
         <Item>
-            <ItemName>Coffee</ItemName>
+            <ItemName>coffee</ItemName>
             <ItemDescription>I think the Guy who Produced this Game, consumed a lot of that</ItemDescription>
             <IsWeapon>False</IsWeapon></Item>
         <Item>
-            <ItemName>Chips</ItemName>
+            <ItemName>chips</ItemName>
             <ItemDescription>If you eat one. You eat all</ItemDescription>
             <IsWeapon>False</IsWeapon></Item>
     </Items>
