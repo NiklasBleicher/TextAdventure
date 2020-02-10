@@ -38,7 +38,7 @@ namespace HarveysEscape
             {
                 Console.WriteLine("There are no Items in your Inventory");
             }
-            
+
         }
 
         public void DropItem(Room _R)

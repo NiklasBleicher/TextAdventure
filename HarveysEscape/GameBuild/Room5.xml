@@ -13,7 +13,7 @@
             <Interactions>
                 <Talk>I only Serve Stink-Drink here. You can have one if you can find my old Ball. Take it or leave it</Talk>
                 <WrongItem>You should get out of my Face </WrongItem>
-                <RightItem>My Ball Nice. Now I can produce another Portion of Stink-Drink. One Stink-Drink here you Go </RightItem>
+                <RightItem>Ball</RightItem>
             </Interactions>
         </NPC>
         <NPC>

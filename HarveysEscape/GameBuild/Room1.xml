@@ -29,6 +29,19 @@
                 <RightItem>Chips</RightItem>
             </Interactions>
         </NPC>
+        <NPC>
+            <Loot>
+                <LootName>Key</LootName>
+                <LootDescription>This is the Key</LootDescription>
+                <LootIsWeapon>False</LootIsWeapon>
+            </Loot>
+            <Name>Guard</Name>
+            <Interactions>
+                <Talk>You are not allowed to go out here... and me either and I could really use a Drink</Talk>
+                <WrongItem>Take that out of my Face right now</WrongItem>
+                <RightItem>Stink-Drink</RightItem>
+            </Interactions>
+        </NPC>
     </NPCs>
     <Items>
         <Item>
@@ -48,7 +61,7 @@
             <LeadsTo>Sleeping Area</LeadsTo>
         </NorthDoor>
         <SouthDoor>
-            <IsOpen>True</IsOpen>
+            <IsOpen>False</IsOpen>
             <LeadsTo>Entrance Hall</LeadsTo>
         </SouthDoor>
         <WestDoor>

@@ -27,6 +27,7 @@ namespace HarveysEscape
             {
                
                 Console.WriteLine("What do you want to do?");
+                DisplayCommands();
                 Console.Write(">");
                 string input = Console.ReadLine();
                 input = input.ToLower();
@@ -63,7 +64,7 @@ namespace HarveysEscape
                         break;
                     case "attack":
                     case     "a":
-                        CurrentRoom.FightNPC(Player);
+                        CurrentRoom.FightNPC(this);
                         break;
                     case "show item":
                     case     "si":
@@ -83,7 +84,7 @@ namespace HarveysEscape
                         break;
                     case "give item":
                     case     "gi":
-                        CurrentRoom.GiveItemToNPC(Player);
+                        CurrentRoom.GiveItemToNPC(this);
                         break;
                     case "quit":
                     case "q":
@@ -99,5 +100,6 @@ namespace HarveysEscape
         {
             Console.WriteLine("commands(c), look(l), inventory(i), attack(a), show item(si), talk(tk),take item(ti),drop item(di), give item(gi), north(n), south(s), west(w), east(e), quit(q)");
         }
+
     }
 }

@@ -8,10 +8,10 @@ namespace HarveysEscape
         public bool IsOpen;
         public string LeadsTo;
 
-        public Door(bool _IsOpen, string _LeadsTo)
+        public Door(bool _isOpen, string _leadsTo)
         {
-            this.IsOpen = _IsOpen;
-            this.LeadsTo = _LeadsTo;
+            this.IsOpen = _isOpen;
+            this.LeadsTo = _leadsTo;
         }
 
         public void TryPassDoor(TextAdventure _TA)
@@ -22,7 +22,39 @@ namespace HarveysEscape
             }
             else
             {
-                Console.WriteLine(this.LeadsTo);
+                if (LeadsTo == "FREEDOME")
+                {
+                    Console.WriteLine("YOU WON THE GAME");
+                    _TA.GameStatus = false;
+                }
+                else
+                {
+                    Console.WriteLine("Leeds to: " + this.LeadsTo);
+                    if ((LeadsTo == "Entrance Hall") && (IsOpen == false))
+                    {
+                        if (_TA.Player.Inventory.Count > 0)
+                        {
+                            foreach (Item item in _TA.Player.Inventory)
+                            {
+                                if (item.Name == "Key")
+                                {
+                                    _TA.CurrentRoom.SouthDoor.IsOpen = true;
+                                    Console.WriteLine("You unlocked the Door!");
+                                    PassDor(_TA);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("You need a Key to enter");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("There are no Items in you Inventory, you need a Key to enter");
+                        }
+                    }
+                }
+                
             }
         }
 
