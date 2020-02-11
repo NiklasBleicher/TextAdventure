@@ -26,7 +26,7 @@ namespace HarveysEscape
             String input = Console.ReadLine();
             
             
-            
+            //Game Load
             if (input == "1")
             {
                 System.IO.DirectoryInfo xmlPath = new System.IO.DirectoryInfo(@"../../GameBuild/");
@@ -67,11 +67,11 @@ namespace HarveysEscape
                     
                     for (int i = 0; i < xmlRooms.Count; i++)
                     {
-                        //Get Data for Room
+                        //Set Data for Room
                         string name = (xmlRooms[i].InnerXml);
                         string description = xmlDescription[i].InnerXml;
                         
-                        //Get Data for Doors in Room
+                        //Set Data for Doors in Room
                         Door northDoor = new Door(Convert.ToBoolean(xmlNorthDoor[i].FirstChild.InnerText),
                             xmlNorthDoor[i].LastChild.InnerText);
                         Door southDoor = new Door(Convert.ToBoolean(xmlSouthDoor[i].FirstChild.InnerText),
@@ -81,7 +81,7 @@ namespace HarveysEscape
                         Door eastDoor = new Door(Convert.ToBoolean(xmlEastDoor[i].FirstChild.InnerText),
                             xmlEastDoor[i].LastChild.InnerText);
 
-                        //Get Data for Items in Room
+                        //Set Data for Items in Room
                         List<Item> items = new List<Item>();
 
                         for (int k = 0; k < xmlItem.Count; k++)
@@ -93,7 +93,7 @@ namespace HarveysEscape
                             items.Add(item);
                         }
 
-                        //Get Data for NPC in Room
+                        //Set Data for NPC in Room
                         List<NPC> npcs = new List<NPC>();
                         
                         for(int count = 0; count < xmlNPC.Count; count++)
@@ -120,7 +120,7 @@ namespace HarveysEscape
                 //Set first Room to Start Room
                 Room currentRoom = rooms[0];
                 
-                //Filter Player Elements fromXML
+                //Get Player Elements from XML
                 XmlDocument doc2 = new XmlDocument();
                 doc2.Load(@"../../GameBuild/Player.xml");
                 XmlNodeList xmlPlayerName = doc2.GetElementsByTagName("Name");
@@ -128,7 +128,7 @@ namespace HarveysEscape
                 XmlNodeList xmlStartText = doc2.GetElementsByTagName("StartText");
                 XmlNodeList xmlEndText = doc2.GetElementsByTagName("EndText");
 
-                string playerName = xmlPlayerName[0].InnerXml;
+                string playerName = xmlPlayerName[0].InnerXml; 
                 int playerHealth = int.Parse(xmlPlayerHealth[0].InnerXml);
                 List<Item> playerInventory = new List<Item>();
                 string startText = xmlStartText[0].InnerXml;
@@ -136,11 +136,12 @@ namespace HarveysEscape
                 
                 Player player = new Player(playerName, playerHealth, playerInventory, startText, endText);
                 
-                TA = new TextAdventure(rooms, player, currentRoom);
+                TA = new TextAdventure(rooms, player, currentRoom); //Create new Object Textadventure with all Data from XML
                 
-                //Call StartGame
+                //Call StartGame, with new TA Object
                 StartGame(TA);
             }
+            //Game Quit
             else if(input == "2")
             {
                 return; //Ends Game
@@ -150,12 +151,11 @@ namespace HarveysEscape
                 Console.WriteLine("Error! Please try again!");
                 LoadGame();
             }
-
-            //Load Data from XML to Create Structure
+            
 
         }
         
-        //Initialize New Game with all Parameters from LoadGame()
+        //Initialize New Game with TA Object from LoadGame()
         private static void StartGame(TextAdventure _TA)
         {
             //Calls Play() from Text-Adventure-Class

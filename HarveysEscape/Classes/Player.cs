@@ -22,7 +22,8 @@ namespace HarveysEscape
             this.EndText = _endText;
 
         }
-
+        
+        //Displays all Items in Player Inventory 
         public void ShowInventory()
         {
             if (Inventory.Count > 0)
@@ -30,7 +31,7 @@ namespace HarveysEscape
                 Console.Write("Items in your Inventory: ");
                 foreach (Item item in Inventory)
                 {
-                    Console.Write(item.Name + ", ");
+                    Console.Write(item.Name + ", "); 
                 }
                 Console.Write("\n");
             }
@@ -40,7 +41,8 @@ namespace HarveysEscape
             }
 
         }
-
+        
+        //Drop Item from Player Inventory to Current Room
         public void DropItem(Room _R)
         {
             Console.WriteLine("Which Item do you want to drop?");
@@ -73,7 +75,7 @@ namespace HarveysEscape
         }
 
     
-
+        //Take Item from Current Room in Player Inventory
         public void TakeItem(Room _R)
         {
             Console.WriteLine("Which Item do you want to pick up?");
@@ -102,7 +104,8 @@ namespace HarveysEscape
                 Console.WriteLine("There are no Items in this Room");
             }
         }
-
+        
+        //Display Item Description, only Items from Inventory
         public void ShowItem()
         {
             Console.WriteLine("Which Item do you want to inspect?");

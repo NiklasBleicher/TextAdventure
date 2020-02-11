@@ -8,9 +8,7 @@ using System.Runtime.Remoting.Channels;
 
 namespace HarveysEscape
 {
-    //Method 
-    //Constructor
-     class Room
+    class Room
     {
         public String Name;
         public String Description;
@@ -35,7 +33,8 @@ namespace HarveysEscape
 
         }
 
-
+        
+        //Describes Room, List NPCs, List Items in Room
         public void ShowRoom()
         {
             Console.WriteLine(Description + "\n");
@@ -68,7 +67,8 @@ namespace HarveysEscape
                 Console.WriteLine("We are all alone in here");
             }
         }
-
+        
+        //Invokes NPC Talk Interaction
         public void TalkToNpc()
         {
             Console.WriteLine("Who do you want to talk to?");
@@ -76,6 +76,7 @@ namespace HarveysEscape
             input = input.ToLower();
             if (Npcs.Count > 0)
             {
+                // Searches for right NPC in Room
                 foreach (NPC npc in Npcs)
                 {
                     if (input == npc.Name)
@@ -97,6 +98,7 @@ namespace HarveysEscape
                 {
                     if (input == npc.Name)
                     {
+                        //Check if NPC is Dr.Marcel
                         if (input != "dr.marcel")
                         {
                             Console.WriteLine("Attacking " + npc.Name + " would cause even more trouble");
@@ -158,7 +160,8 @@ namespace HarveysEscape
                 Console.WriteLine("No Danger in this Room");
             }
         }
-
+        
+        //Gets called after Fight  
         public void RemoveNPC(NPC _npc)
         {
             int count = 0;
@@ -171,7 +174,8 @@ namespace HarveysEscape
                 }
             }
         }
-
+        
+        
         public void GiveItemToNPC(TextAdventure _TA)
         {
             Console.WriteLine("Who do you want to give an Item?");
@@ -186,7 +190,7 @@ namespace HarveysEscape
                         Console.WriteLine("Which Item do you want to give to " + input);
                         string item = Console.ReadLine();
                         item = item.ToLower();
-                        if (item == npc.Interactions[2])
+                        if (item == npc.Interactions[2]) //Check if Item is the right Item for NPC
                         {
                             Console.WriteLine("Thank you so much for the " + item);
                             int counter = 0;
@@ -197,7 +201,7 @@ namespace HarveysEscape
                                     _TA.Player.Inventory.RemoveAt(counter);
                                     Console.WriteLine(item + " was removed from Inventory");
                                     Console.WriteLine("Here is Something in return: " + npc.Loot.Name);
-                                    _TA.Player.Inventory.Add(npc.Loot);
+                                    _TA.Player.Inventory.Add(npc.Loot); //NPC-Loot gets Added to Player Inventory
                                     break;
 
                                 }
@@ -209,7 +213,7 @@ namespace HarveysEscape
                         }
                         else
                         {
-                            Console.WriteLine(npc.Interactions[1]);
+                            Console.WriteLine(npc.Interactions[1]); //Display Wrong-Item Text
                         }
                         
                     }

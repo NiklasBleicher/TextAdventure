@@ -24,9 +24,7 @@ namespace HarveysEscape
             {
                 if (LeadsTo == "FREEDOME")
                 {
-                    Console.WriteLine("YOU WON THE GAME");
-                    Console.ReadLine();
-                    _TA.GameStatus = false;
+                    Console.WriteLine("This is the Way out you just have to Fight Dr.Marcel and Freedom is yours");
                 }
                 else
                 {
@@ -35,6 +33,7 @@ namespace HarveysEscape
                     {
                         if (_TA.Player.Inventory.Count > 0)
                         {
+                            Console.WriteLine("You need a Key to open the Door");
                             foreach (Item item in _TA.Player.Inventory)
                             {
                                 if (item.Name == "key")
@@ -44,7 +43,6 @@ namespace HarveysEscape
                                     PassDor(_TA);
                                     break;
                                 }
-                                
                             }
                         }
                         else

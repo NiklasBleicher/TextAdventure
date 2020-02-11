@@ -20,9 +20,10 @@ namespace HarveysEscape
             this.GameStatus = true;
         }
         
+        //Method gets invoked in Program.cs, Includes all needed Data
         public void Play()
         {
-            
+            //Runs as long GameStatus is True
             if (GameStatus)
             {
                
@@ -30,7 +31,8 @@ namespace HarveysEscape
                 Console.Write(">");
                 string input = Console.ReadLine();
                 input = input.ToLower();
-
+                
+                //Handle different User-Input
                 switch (input)
                 {
                     case "commands":
