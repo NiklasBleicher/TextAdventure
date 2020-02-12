@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 namespace HarveysEscape
 {
-    
     class TextAdventure
     {
         public List<Room> AllRooms;
         public Player Player;
         public Room CurrentRoom;
         public bool GameStatus;
-        
+
         //For creating a new Textadventure in Program.cs
         public TextAdventure(List<Room> _allRooms, Player _player, Room currentRoom)
         {
@@ -19,28 +18,27 @@ namespace HarveysEscape
             this.CurrentRoom = currentRoom;
             this.GameStatus = true;
         }
-        
+
         //Method gets invoked in Program.cs, Includes all needed Data
         public void Play()
         {
             //Runs as long GameStatus is True
             if (GameStatus)
             {
-               
                 Console.WriteLine("What do you want to do?");
                 Console.Write(">");
                 string input = Console.ReadLine();
                 input = input.ToLower();
-                
+
                 //Handle different User-Input
                 switch (input)
                 {
                     case "commands":
-                    case    "c":
+                    case "c":
                         DisplayCommands();
                         break;
                     case "east":
-                    case    "e":
+                    case "e":
                         CurrentRoom.EastDoor.TryPassDoor(this);
                         break;
                     case "west":
@@ -64,19 +62,19 @@ namespace HarveysEscape
                         Player.ShowInventory();
                         break;
                     case "attack":
-                    case     "a":
+                    case "a":
                         CurrentRoom.FightNPC(this);
                         break;
                     case "show item":
-                    case     "si":
+                    case "si":
                         Player.ShowItem();
                         break;
                     case "talk":
-                    case  "tk":
+                    case "tk":
                         CurrentRoom.TalkToNpc();
                         break;
                     case "drop item":
-                    case     "di":
+                    case "di":
                         Player.DropItem(CurrentRoom);
                         break;
                     case "take item":
@@ -84,23 +82,23 @@ namespace HarveysEscape
                         Player.TakeItem(CurrentRoom);
                         break;
                     case "give item":
-                    case     "gi":
+                    case "gi":
                         CurrentRoom.GiveItemToNPC(this);
                         break;
                     case "quit":
                     case "q":
                         GameStatus = false;
                         break;
-
                 }
+
                 Play();
             }
         }
 
         public void DisplayCommands()
         {
-            Console.WriteLine("commands(c), look(l), inventory(i), attack(a), show item(si), talk(tk),take item(ti),drop item(di), give item(gi), north(n), south(s), west(w), east(e), quit(q)");
+            Console.WriteLine(
+                "commands(c), look(l), inventory(i), attack(a), show item(si), talk(tk),take item(ti),drop item(di), give item(gi), north(n), south(s), west(w), east(e), quit(q)");
         }
-
     }
 }
